@@ -56,7 +56,7 @@ public class die{
          currentside = (int)(Math.random() * face) + 1;
          times++;
       }
-      System.out.println("The side up is now "+currentside+". Finally in "+times);
+      System.out.println("The side up is now "+currentside+" for dice having maximum side of "+currentside+". Finally in "+times+" rolls.");
    }
 
 
