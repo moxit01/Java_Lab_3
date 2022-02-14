@@ -24,7 +24,7 @@ public class DiceGame {
 
         die20.max();
 
-        //creating 5 dice with 6 sides.
+        //creating 5 dice with 6 sides to have all dice with same sides..
 
         System.out.println("\n========BONUS========");
         System.out.println("Creating 5 d6.");
@@ -34,8 +34,24 @@ public class DiceGame {
         die die4 = new die();
         die die5 = new die(); 
 
-        
+        boolean match = false;
+        int rolls = 1;
 
+        while(match!= true){
+            die1.rolls();
+            die2.rolls();
+            die3.rolls();
+            die4.rolls();
+            die5.rolls();
+            rolls++;
+            if(die1.getcurrentside() == die2.getcurrentside() && die2.getcurrentside() == die3.getcurrentside() && 
+            die3.getcurrentside() == die4.getcurrentside() && die4.getcurrentside() == die5.getcurrentside())
+            {
+                match = true;
+            }
+
+        }
+        System.out.println("\nHurray!!! It took "+rolls+" rolls to have 5 dice with same sides i.e. "+die1.getcurrentside());
       
         
 

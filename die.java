@@ -51,6 +51,12 @@ public class die{
       System.out.println("The new value is "+currentside);
    }
 
+   //created for bonus question to avoid printing print statements.
+   public void rolls()
+   {
+      currentside = (int)(Math.random() * face) + 1;
+   }
+
    //getting max value for one of the dice
    public boolean max()
    {
