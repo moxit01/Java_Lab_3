@@ -2,7 +2,8 @@
 //Date Created : 14-FEB-2022.
 
 public class DiceGame {
-     
+    
+    //main function for the dicegame.    
     public static void main(String[] args) {
 
         die die, die20, die10;
@@ -23,10 +24,20 @@ public class DiceGame {
 
         die20.max();
 
+        //creating 5 dice with 6 sides.
 
+        System.out.println("\n========BONUS========");
+        System.out.println("Creating 5 d6.");
+        die die1 = new die();
+        die die2 = new die();
+        die die3 = new die();
+        die die4 = new die();
+        die die5 = new die(); 
 
-       
+        
 
+      
+        
 
 
  
@@ -36,27 +47,3 @@ public class DiceGame {
     
  }  
 
-
-
-
-
- 
-
-  //    die dice;          // A variable that will refer to the dice.
-    //    int rollCount;    // Number of times the dice have been rolled.
- 
-    //    dice = new die();  // Create the PairOfDice object.
-    //    rollCount = 0;
-       
-        /* Roll the dice until they come up snake eyes. */
-       
-    //    do {
-    //        dice.roll();
-    //        System.out.println("The dice come up " + dice.getDie1() 
-    //                                         + " and " + dice.getDie2());
-    //        rollCount++;
-    //    } while (dice.getTotal() != 2);
-       
-    //    /* Report the number of rolls. */
-       
-    //    System.out.println("\nIt took " + rollCount + " rolls to get a 2.");

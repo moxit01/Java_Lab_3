@@ -12,6 +12,8 @@ public class die{
    public int currentside;
    public int times = 0;
 
+
+   //Default constructor
    public die()
    {
       dicename = "d6";
@@ -20,15 +22,17 @@ public class die{
       System.out.println("\nthe current side up for "+dicename+" is "+currentside);
    }
 
+   //constructor with 1 parameters
    public die(int face)
    {
       this.face = face;
-      this.dicename = "d"+face ;
+      dicename = "d"+face ;
       currentside = (int)(Math.random() * face) + 1;
       System.out.println("\nThe current side up for d"+face+" is "+currentside);
       
    }
 
+   //constructor with 2 parameters
    public die(int face, String dicename)
    {  
       this.face = face;
@@ -38,82 +42,39 @@ public class die{
 
    }
 
-
+   //rolling function
    public void roll()
    {
       
-      this.currentside = (int)(Math.random() * this.face) + 1;
-      System.out.println("\nRolling the "+this.dicename);
-      System.out.println("The new value is "+this.currentside);
+      currentside = (int)(Math.random() * face) + 1;
+      System.out.println("\nRolling the "+dicename);
+      System.out.println("The new value is "+currentside);
    }
 
-
-   public void max()
+   //getting max value for one of the dice
+   public boolean max()
    {
       System.out.println("\nSetting the dice");
-      while(currentside!=20)
+      while(currentside!=face)
       {
          currentside = (int)(Math.random() * face) + 1;
          times++;
       }
       System.out.println("The side up is now "+currentside+" for dice having maximum side of "+currentside+". Finally in "+times+" rolls.");
+      return true;
    }
+
+   //get current side
+   public int getcurrentside() 
+   {
+      return currentside;
+   }
+
+
+  
+
 
 
 
 }
 
-
-
-
-
-
-
-
-
-
-// public class die {
-     
-//         public int d10 ;   // Number showing on the first die.
-//         public int d6;   // Number showing on the second die.
-        
-//         public die() {
-//                 // Constructor.  Rolls the dice, so that they initially
-//                 // show some random values.
-//             roll();  // Call the roll() method to roll the dice.
-//         }
-        
-//         public void roll() {
-//                 // Roll the dice by setting each of the dice to be
-//                 // a random number between 1 and 6.
-//             d10 = (int)(Math.random()*10) + 1;
-//             d6 = (int)(Math.random()*6) + 1;
-//         }
-                 
-//         public int getDie1() {
-//               // Return the number showing on the first die.
-//            return d10;
-//         }
-        
-//         public int getDie2() {
-//               // Return the number showing on the second die.
-//            return d6;
-//         }
-        
-//         public int getTotal() {
-//               // Return the total showing on the two dice.
-//            return d10 + d6;
-//         }
-        
-//      }  // end class PairOfDice
-
-
-
-//      /* 
-//         Rolls a pair of dice until the dice come up snake eyes
-//         (with a total value of 2).  Counts and reports the
-//         number of rolls.
-//      */
-     
-     
-     
